@@ -34,6 +34,7 @@
             // Checking if AndroidBridge is available in the global context
             if (window.MembershipPresidioWebBridge) {
                 // Call the onMembershipAction method with the JSON string
+                console.log("AndroidBridge Msg sent SUCCESS!!");
                 window.MembershipPresidioWebBridge.onMembershipAction(JSON.stringify(payload));
             } else {
                 console.log("AndroidBridge is not available");
