@@ -32,9 +32,9 @@
 };
             
             // Checking if AndroidBridge is available in the global context
-            if (window.membership_general) {
+            if (window.MembershipPresidioWebBridge) {
                 // Call the onMembershipAction method with the JSON string
-                window.membership_general.onMembershipAction(JSON.stringify(payload));
+                window.MembershipPresidioWebBridge.onMembershipAction(JSON.stringify(payload));
             } else {
                 console.log("AndroidBridge is not available");
             }
