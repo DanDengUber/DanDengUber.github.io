@@ -32,9 +32,9 @@
 };
             
             // Checking if AndroidBridge is available in the global context
-            if (window.AndroidBridge) {
+            if (window.membership_general) {
                 // Call the onMembershipAction method with the JSON string
-                window.AndroidBridge.onMembershipAction(JSON.stringify(payload));
+                window.membership_general.onMembershipAction(JSON.stringify(payload));
             } else {
                 console.log("AndroidBridge is not available");
             }
@@ -49,7 +49,7 @@
     <br><br>
 
 <h3>WebView Bridge Test</h3>
-<p>Click the button below to send an action to Android's WebView.</p>
+<p>Click the button below to send an action to Android's WebView membership_general.</p>
 <button onclick="sendActionToAndroid()">Send Action to Android</button>
     <br><br>
     <br><br>
