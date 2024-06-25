@@ -31,8 +31,9 @@
     <h3>SSO School Portal</h3>
     <input type="text" id="userInput" placeholder="Enter URL here" />
     <button onclick="updateLink()">Update Link</button>
-    <p>Click your custom link: <a href="#" id="dynamicLink">Default Link</a></p>
-
+    <p>Your SSO link: <a href="#" id="dynamicLink">Default Link</a></p>
+    <br>
+    <button onclick="sendOpenWebActionToAndroid()">Open SSO Web Portal</button>
     <script>
         function updateLink() {
             // Get the input value from the user
@@ -48,5 +49,6 @@
             link.textContent = userInput || "No link provided";
         }
     </script>
+    <script src="actions.js"></script>
 </body>
 </html>
