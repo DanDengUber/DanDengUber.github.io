@@ -41,6 +41,7 @@ function sendOpenWebActionToAndroid(dynamicUrl) {
                     "type": "openWeb",
                     "openWeb": {
                         "url": dynamicUrl,
+                        "webviewAnalyticsID": "TestSSO",
                         "webviewConfig": {
                             "type": "presidio",
                             "presidio": {
