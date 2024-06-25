@@ -30,7 +30,7 @@ function sendActionToAndroid() {
     }
 }
 
-function sendOpenWebActionToAndroid() {
+function sendOpenWebActionToAndroid(dynamicUrl) {
     var payload = {
         "type": "membership_action_event",
         "messageId": "083d5b55-1b58-4df0-afe4-5f3751b65df0",
@@ -40,7 +40,7 @@ function sendOpenWebActionToAndroid() {
                 "data": {
                     "type": "openWeb",
                     "openWeb": {
-                        "url": "https://services.sheerid.com/rest/v2/verification/667b42688e764b6dae6e023c/step/sso",
+                        "url": dynamicUrl,
                         "webviewConfig": {
                             "type": "presidio",
                             "presidio": {

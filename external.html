@@ -33,7 +33,7 @@
     <button onclick="updateLink()">Update Link</button>
     <p>Your SSO link: <a href="#" id="dynamicLink">Default Link</a></p>
     <br>
-    <button onclick="sendOpenWebActionToAndroid()">Open SSO Web Portal</button>
+    <button onclick="sendOpenWebActionToAndroid(document.getElementById('userInput').value)">Open SSO Web Portal</button>
     <script>
         function updateLink() {
             // Get the input value from the user
