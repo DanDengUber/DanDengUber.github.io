@@ -25,8 +25,29 @@
     <br><br>
     <br><br>
 
+
+    <!-- To regenerate link, use the following script: -->
+    <!-- curl -X POST https://services.sheerid.com/rest/v2/verification/program/664e288881aee55db290a031/step/collectStudentPersonalInfo -d '{"firstName":"SSO","lastName":"SSO","birthDate":"1991-01-23","email":"verify@test.com","organization":{"id":1234,"name":"Forsyth Technical Community College"},"metadata":{"SSORedirectUrl":"https://www.ubereats.com/uber-one?access-point=SETTINGS?request-id=blah"}}' -H "Content-Type: application/json" | jq . -->
     <h3>SSO School Portal</h3>
-    <a href="https://services.sheerid.com/rest/v2/verification/667b3e3ae3d93467c8eaacb2/step/sso">
-        Navigate to SSO School Portal</a>
+    <h1>Dynamic Link Creator</h1>
+    <input type="text" id="userInput" placeholder="Enter URL here" />
+    <button onclick="updateLink()">Update Link</button>
+    <p>Click your custom link: <a href="#" id="dynamicLink">Default Link</a></p>
+
+    <script>
+        function updateLink() {
+            // Get the input value from the user
+            var userInput = document.getElementById('userInput').value;
+
+            // Get the link element
+            var link = document.getElementById('dynamicLink');
+
+            // Update the href attribute of the link
+            link.href = userInput;
+
+            // Optional: Update link text to show the URL (or you can use a fixed text)
+            link.textContent = userInput || "No link provided";
+        }
+    </script>
 </body>
 </html>
