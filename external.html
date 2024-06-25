@@ -29,7 +29,6 @@
     <!-- To regenerate link, use the following script: -->
     <!-- curl -X POST https://services.sheerid.com/rest/v2/verification/program/664e288881aee55db290a031/step/collectStudentPersonalInfo -d '{"firstName":"SSO","lastName":"SSO","birthDate":"1991-01-23","email":"verify@test.com","organization":{"id":1234,"name":"Forsyth Technical Community College"},"metadata":{"SSORedirectUrl":"https://www.ubereats.com/uber-one?access-point=SETTINGS?request-id=blah"}}' -H "Content-Type: application/json" | jq . -->
     <h3>SSO School Portal</h3>
-    <h1>Dynamic Link Creator</h1>
     <input type="text" id="userInput" placeholder="Enter URL here" />
     <button onclick="updateLink()">Update Link</button>
     <p>Click your custom link: <a href="#" id="dynamicLink">Default Link</a></p>
