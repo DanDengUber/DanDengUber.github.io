@@ -18,7 +18,7 @@
             font-size: 18px;
         }
     </style>
-    <script src="actions.js"></script>
+    <script src="js/actions.js"></script>
 </head>
 <body>
     <h1>Use Your School Credientials to Verify</h1>
@@ -34,7 +34,7 @@
     <p>Your SSO link: <a href="#" id="dynamicLink">Empty Link</a></p>
     <br>
     <button onclick="sendOpenWebActionToAndroid(document.getElementById('userInput').value)">Open SSO Web Portal</button>
-    
+
     <script>
         function updateLink() {
             // Get the input value from the user
