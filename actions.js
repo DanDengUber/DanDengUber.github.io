@@ -1,4 +1,4 @@
-function sendActionToAndroid() {
+function sendActionToAndroid(iconType) {
     var payload = {
         "type": "membership_action_event",
         "messageId": "083d5b55-1b58-4df0-afe4-5f3751b65df0",
@@ -12,7 +12,7 @@ function sendActionToAndroid() {
                         "webviewAction": {
                             "type": "updateNavButtonIconAction",
                             "updateNavButtonIconAction": {
-                                "navigationButtonIcon": "X"
+                                "navigationButtonIcon": iconType
                             }
                         }
                     }
