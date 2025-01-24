@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Redirect to your deep link
+        window.location.href = "ubereats://membership/action?action-type=open-modal&modal-id=TOP_RATED_COURIERS_BENEFIT_DETAILS&access-point=deeplink&pass-campaign=deeplink";
+    </script>
+</head>
+<body>
+    <p>Redirecting... If you are not redirected, <a href="ubereats://membership/action?action-type=open-modal&modal-id=TOP_RATED_COURIERS_BENEFIT_DETAILS&access-point=deeplink&pass-campaign=deeplink">click here</a>.</p>
+</body>
+</html>
