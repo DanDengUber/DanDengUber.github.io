@@ -8,6 +8,12 @@
 <body>
 
 <h1>Deep Link Test</h1>
+
+<p>
+<br><br>Can launch deeplink with this command:
+<br><br>adb shell am start -a android.intent.action.VIEW "uber://membership/action?action-type=open-checkout\&screen-id=purchase_benefits_halfsheet\&access-point=checkout_button\&pass-campaign=upsell_lite_optin_sporadics_t5\&screen-mode=bottom-sheet\&launch-context=checkout_interstitial\&lob-specific-meta=%7B%22screenIDVariant%22%3A%22custom_message%22%2C%22message%22%3A%22Save%20%246.47%20on%20this%20order%22%7D"
+<br><br>adb shell am start -a android.intent.action.VIEW "uber://membership/action?action-type=open-checkout&screen-id=COMMUTER_PRICE_LOCK_PASS&use-screenstack=true&lob-specific-meta=%7B%22pickup_place_id%22%3A%20%22foo%22%2C%20%22pickup_place_provider%22%3A%20%22bar%22%2C%20%22dropoff_place_id%22%3A%20%22foo%22%2C%20%22dropoff_place_provider%22%3A%20%22bar%22%2C%20%22start_hour_of_day%22%3A%201%2C%20%22start_minute%22%3A%202%7D&access-point=test&pass-campaign=rides_product_selector&screen-mode=bottom-sheet"
+</p>
     
 <h3>Hub Screen</h3>
 <a href="ubereats://membership/action?action-type=open-checkout&screen-id=ANNUAL_UPGRADE&entry-point=UPSELL&access-point=bottom_sheet_home&pass-campaign=annual_upsell&launch-context=checkout&screen-mode=full-screen&use-default-dark-style=true">
@@ -19,6 +25,9 @@
 <a href="ubereats://membership/action?action-type=open-hub&access-point=test&pass-campaign=mobile">
     Open Uber Eats Hub</a>
 <br><br>
+<a href="uber://membership/action?action-type=open-hub&access-point=test&pass-campaign=mobile">
+    Open Uber Rider Hub</a>
+<br><br>
 <a href="uber://membership/action?action-type=open-checkout&screen-id=ANNUAL_UPGRADE&entry-point=UPSELL&access-point=bottom_sheet_home&pass-campaign=annual_upsell&launch-context=checkout&screen-mode=full-screen&use-default-dark-style=true">
     Open Uber AP No Hub</a>
 <br><br>
@@ -27,14 +36,32 @@
 <br><br>
 <a href="uber://plus?entry-point=ring&access-point=ring&pass-campaign=upsell_acq_evergreen">
     Open Rider With Hub legacy plus</a>
+<br><br>
+<a href="uber://membership/action?action-type=open-hub&access-point=PUSH&pass-campaign=non_member_upper_limit_potential_last_savings_free_trial&entry-point=tipping_modal&query-context%3D%7B%22action_type%22%3A%22grant%22%2C%22transaction_reference_id%22%3A%222769109d-aeb6-42e0-9dff-3cf86ceca89b%22%7D">
+    Open Rider With Hub from Push Campaign</a>
 
-    <br><br><br><br>
-    <h3>Checkout Screen</h3>
-    <a href="ubereats://membership/action?action-type=open-checkout\&screen-id=purchase_benefits_halfsheet\&access-point=checkout_button\&pass-campaign=upsell_lite_optin_sporadics_t5\&screen-mode=bottom-sheet\&launch-context=checkout_interstitial\&lob-specific-meta=%7B%22screenIDVariant%22%3A%22custom_message_not_now%22%2C%22message%22%3A%22Save%20%246.47%20on%20this%20order%22%7D">
-        Eats Checkout Sporadics Screen</a>
-    <br><br>
-    <a href="ubereats://membership/action?action-type=open-checkout&screen-mode=bottom-sheet&screen-id=renew&pass-campaign=renew&access-point=CASH_HUB_DETAILS_PAGE&launch-context=cash_hub_details_page">
-        Eats Checkout Renew Membership Screen</a>
+<br><br><br><br>
+<h3>Checkout Screen</h3>
+<a href="ubereats://membership/action?action-type=open-checkout\&screen-id=purchase_benefits_halfsheet\&access-point=test\&pass-campaign=upsell_lite_optin_sporadics_t5\&screen-mode=bottom-sheet\&launch-context=checkout_interstitial\&lob-specific-meta=%7B%22screenIDVariant%22%3A%22custom_message_not_now%22%2C%22message%22%3A%22Save%20%246.47%20on%20this%20order%22%7D">
+    Eats Checkout Sporadics Screen</a>
+<br><br>
+<a href="ubereats://membership/action?action-type=open-checkout&screen-mode=bottom-sheet&screen-id=renew&pass-campaign=renew&access-point=CASH_HUB_DETAILS_PAGE&launch-context=cash_hub_details_page">
+    Eats Checkout Renew Membership Screen</a>
+<br><br>
+<a href="ubereats://membership/action?action-type=open-checkout&hide-status-bar=true&screen-id=purchase_benefits_halfsheet&access-point=storefront_banner&pass-campaign=upsell_storefront_membership_improvements&screen-mode=bottom-sheet&launch-context=storefront_banner">
+    Eats Checkout Lite-Opt_in Hide Status bar</a>
+<br><br>
+<a href="uber://membership/action?action-type=open-checkout&screen-id=purchase_benefits_halfsheet&access-point=test&pass-campaign=rides_product_selector&screen-mode=bottom-sheet&launch-context=product_selectorlob-specific-meta=%7B%22screenIDVariant%22%3A%22custom_message%22%2C%22message%22%3A%22You+can+earn+6%25+back+Uber+One+credits+on+this+ride.%22%7D">
+    Rider Checkout lite-opt-in Screen 1</a>
+<br><br>
+<a href="uber://membership/action?action-type=open-checkout&screen-id=purchase_benefits_halfsheet&lob-specific-meta=%7B%22disable_use_credits%22%3A%22true%22%7D&access-point=test&pass-campaign=rides_product_selector&screen-mode=bottom-sheet">
+    Rider Checkout lite-opt-in Screen no cashback banner</a>
+<br><br>
+<a href="uber://membership/action?action-type=open-checkout&screen-id=purchase_benefits_halfsheet&lob-specific-meta=%7B%22screenIDVariant%22%3A%22custom_message%22%2C%22message%22%3A%22Earning%206%25%20back%20with%20Uber%20One%22%2C%22disable_use_credits%22%3A%22true%22%7D&access-point=test&pass-campaign=rides_product_selector&screen-mode=bottom-sheet">
+    Rider Checkout lite-opt-in Screen cashback banner</a>
+<br><br>
+<a href="uber://membership/action?action-type=open-checkout&screen-id=COMMUTER_PRICE_LOCK_PASS&use-screenstack=true&lob-specific-meta=%7B%22pickup_place_id%22%3A%20%22foo%22%2C%20%22pickup_place_provider%22%3A%20%22bar%22%2C%20%22dropoff_place_id%22%3A%20%22foo%22%2C%20%22dropoff_place_provider%22%3A%20%22bar%22%2C%20%22start_hour_of_day%22%3A%201%2C%20%22start_minute%22%3A%202%7D&access-point=test&pass-campaign=rides_product_selector&screen-mode=bottom-sheet">
+    Rider Commuter Pass</a>
 
 <br><br><br><br>
 <h3>Management Screen</h3>
@@ -57,7 +84,6 @@
 <br><br>
 <a href="ubereatsredirect://membership/action?action-type=open-modal&modal-id=ONE_CLICK_CHECKOUT_WELCOME&screen-mode=FULLSCREEN&present-pass-hub=false&entry-point=ONE_CLICK_CHECKOUT_PURCHASE&access-point=INTERSTITIAL_ORDER_TRACKING&pass-campaign=info&use-default-dark-style=true">
     Eats Welcome Membership Redirect</a>
-
 <br><br>
 <a href="ubereats://membership/action?action-type=open-redirect&modal-id=ONE_CLICK_CHECKOUT_WELCOME&screen-mode=FULLSCREEN&present-pass-hub=false&entry-point=ONE_CLICK_CHECKOUT_PURCHASE&access-point=INTERSTITIAL_ORDER_TRACKING&pass-campaign=info&use-default-dark-style=true">
     Eats Welcome Membership Action Open-Redirect to Dismiss CCT</a>
@@ -79,9 +105,14 @@
 <br><br>
 <a href="uber://membership/action?action-type=open-web&pass-campaign=student_campaign&access-point=student_email&web-query=param1%3Dvalue1%26param2%3Dvalue2&web-page-enum=student-verification&query-context=BE_Payload">
     Student verification Rider</a>
+<br><br>
+<a href="http://www.ubereats.com/membership?access-point=google_ad&pass-campaign=upsell&query-context=%7B%22BANNER_TYPE%22%3A%22STUDENT_PLAN_SAVINGS%22%7D">
+    Student Plan universal link</a>
+<br><br>
+<a href="ubereats://membership/action?action-type=open-checkout&screen-id=STUDENT_PLAN_SELECTION&screen-mode=FULL_SCREEN&access-point=deeplink&pass-campaign=deeplink">
+    Student Plan checkout screen</a>
 
-
-
+    <br><br>
     // things below are temporary
     <br><br><br><br>
     <br><br>
