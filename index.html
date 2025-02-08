@@ -7,7 +7,6 @@
     <title>Dan Deng Test</title>
 
     <style>
-        /* Initially hide the content */
         #protected-content {
             display: none;
         }
@@ -15,11 +14,11 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            var correctPassword = "Temp1234"; // Change this to your password
+            var correctPassword = "daddy"; // Change this to your password
             var enteredPassword = "";
 
             while (enteredPassword !== correctPassword) {
-                enteredPassword = prompt("Enter the Password:");
+                enteredPassword = prompt("Enter Password:");
                 if (enteredPassword === null) { 
                     document.body.innerHTML = "<h1>Access Denied</h1>";
                     return;
@@ -33,33 +32,29 @@
 </head>
     
 <body>
-
-        <div id="protected-content">
+    <div id="protected-content">
+        
+        <h1>Dan.Deng Test V1</h1>
+        <a href="about.html">Go To About</a> <br>
+        <br>
+        <br>
+        <a href="external.html">Go To External</a>
+        <br>
+        <br>
+        <a href="deeplink.html">Go To Deeplink</a>
+        <br>
+        <br>
+        <a href="https://xlb-beta.uber.com/membership/student-verification?query-context={"request_id"%3A"9c985333-92d8-41a2-9fb0-62faab5c5a9c"%2C"num_screens_back"%3A3}&action-source=NON_MEMBER_STUDENT_PLAN_MONTHLY&access-point=BILLBOARD&pass-campaign=upsell_regular">
+            Go To Student Plan Verification</a>
+        <br>
+        <br>
+        <a href="redirect-to-deeplink.html">Redirect To Deeplink Uber</a>
+        <br>
+        <br>
+        <a href="redirect-to-deeplink-eats.html">Redirect To Deeplink UberEats</a>
     
-
-    <h1>Dan.Deng Test V1</h1>
-    <a href="about.html">Go To About</a> <br>
-    <br>
-    <br>
-    <a href="external.html">Go To External</a>
-    <br>
-    <br>
-    <a href="deeplink.html">Go To Deeplink</a>
-    <br>
-    <br>
-    <a href="https://xlb-beta.uber.com/membership/student-verification?query-context={"request_id"%3A"9c985333-92d8-41a2-9fb0-62faab5c5a9c"%2C"num_screens_back"%3A3}&action-source=NON_MEMBER_STUDENT_PLAN_MONTHLY&access-point=BILLBOARD&pass-campaign=upsell_regular">
-        Go To Student Plan Verification</a>
-    <br>
-    <br>
-    <a href="redirect-to-deeplink.html">Redirect To Deeplink Uber</a>
-    <br>
-    <br>
-    <a href="redirect-to-deeplink-eats.html">Redirect To Deeplink UberEats</a>
-
-    <iframe src="common/set-icon-component.html" frameborder="0"></iframe>
-
-            
-</div>
-            
+        <iframe src="common/set-icon-component.html" frameborder="0"></iframe>
+    
+    </div>
 </body>
 </html>
