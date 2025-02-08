@@ -6,23 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dan Deng Test</title>
 
+    <style>
+        /* Initially hide the content */
+        #protected-content {
+            display: none;
+        }
+    </style>
+
     <script>
-        (function() {
-            var correctPassword = "Temp1234"; // Set your password here
+        document.addEventListener("DOMContentLoaded", function () {
+            var correctPassword = "Temp1234"; // Change this to your password
             var enteredPassword = "";
 
             while (enteredPassword !== correctPassword) {
-                enteredPassword = prompt("Enter Password:");
+                enteredPassword = prompt("Enter the Password:");
                 if (enteredPassword === null) { 
-                    document.body.innerHTML = "Access Denied";
+                    document.body.innerHTML = "<h1>Access Denied</h1>";
                     return;
                 }
             }
-        })();
+
+            // Show the content only if the password is correct
+            document.getElementById("protected-content").style.display = "block";
+        });
     </script>
 </head>
     
 <body>
+
+        <div id="protected-content">
+    
 
     <h1>Dan.Deng Test V1</h1>
     <a href="about.html">Go To About</a> <br>
@@ -44,6 +57,9 @@
     <a href="redirect-to-deeplink-eats.html">Redirect To Deeplink UberEats</a>
 
     <iframe src="common/set-icon-component.html" frameborder="0"></iframe>
-    
+
+            
+</div>
+            
 </body>
 </html>
