@@ -5,14 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dan Deng Test</title>
+
+    <script>
+        (function() {
+            var correctPassword = "Temp1234"; // Set your password here
+            var enteredPassword = "";
+
+            while (enteredPassword !== correctPassword) {
+                enteredPassword = prompt("Enter Password:");
+                if (enteredPassword === null) { 
+                    document.body.innerHTML = "Access Denied";
+                    return;
+                }
+            }
+        })();
+    </script>
 </head>
-    
-<script>
-  var password = prompt("Enter Password:");
-  if (password !== "Temp1234") {
-    document.body.innerHTML = "Access Denied";
-  }
-</script>
     
 <body>
 
