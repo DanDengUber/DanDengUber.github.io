@@ -25,7 +25,6 @@
             }
     
             async function checkPassword() {
-                const seed = "569d7dc1611b50e40d5b898c212f4742e3b7d76996bac5d63739fef589f3ccc0";
                 let inputs = "";
                 
                 while (true) {
@@ -34,9 +33,8 @@
                         document.body.innerHTML = "<h1>Access Denied</h1>";
                         return;
                     }
-    
                     let update = await coding(inputs);
-                    if (update === seed) break; // Correct password entered
+                    if (update === "569d7dc1611b50e40d5b898c212f4742e3b7d76996bac5d63739fef589f3ccc0") break;
                 }
     
                 document.getElementById("protected-content").style.display = "block";
