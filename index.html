@@ -13,21 +13,37 @@
     </style>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var correctPassword = "daddy"; // Change this to your password
-            var enteredPassword = "";
-
-            while (enteredPassword !== correctPassword) {
-                enteredPassword = prompt("Enter Password:");
-                if (enteredPassword === null) { 
-                    document.body.innerHTML = "<h1>Access Denied</h1>";
-                    return;
-                }
+        (function() {
+            function sha256(str) {
+                const encoder = new TextEncoder();
+                const data = encoder.encode(str);
+                return crypto.subtle.digest('SHA-256', data).then(buf => {
+                    return Array.from(new Uint8Array(buf))
+                        .map(byte => byte.toString(16).padStart(2, '0'))
+                        .join('');
+                });
             }
-
-            // Show the content only if the password is correct
-            document.getElementById("protected-content").style.display = "block";
-        });
+    
+            async function checkPassword() {
+                const correctHash = "3cf0ae2b3a9f14477a96ecb8e1a8852b8c2e7a55cb8f84de318629b5544c62ed"; // Hashed 'daddy'
+                let enteredPassword = "";
+                
+                while (true) {
+                    enteredPassword = prompt("Enter Password:");
+                    if (enteredPassword === null) {
+                        document.body.innerHTML = "<h1>Access Denied</h1>";
+                        return;
+                    }
+    
+                    let hash = await sha256(enteredPassword);
+                    if (hash === correctHash) break; // Correct password entered
+                }
+    
+                document.getElementById("protected-content").style.display = "block";
+            }
+    
+            document.addEventListener("DOMContentLoaded", checkPassword);
+        })();
     </script>
 </head>
     
