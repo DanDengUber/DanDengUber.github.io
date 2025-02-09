@@ -14,7 +14,7 @@
 
     <script>
         (function() {
-            function coding(_input) {
+            function track(_input) {
                 const enc = new TextEncoder();
                 const data = enc.encode(_input);
     
@@ -33,13 +33,12 @@
                 let attempts = "";
                 
                 while (true) {
-                    attempts = prompt("Token:");
+                    attempts = prompt("Tokens:");
                     if (attempts === null) {
                         document.body.innerHTML = "<h1>Access Denied</h1>";
                         return;
                     }
-                    let check = await coding(attempts);
-                    if (check === "569d7dc1611b50e40d5b898c212f4742e3b7d76996bac5d63739fef589f3ccc0") break;
+                    if (await track(await track(attempts)) === "a094f496ef62c73d1a4ff3ec2f6904041d07a6fa6c2fddebe8ac37c9496e15df") break;
                 }
     
                 document.getElementById("protected-content").style.display = "block";
