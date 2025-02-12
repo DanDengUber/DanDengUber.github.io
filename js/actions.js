@@ -42,7 +42,8 @@ function sendOpenWebActionToAndroid(dynamicUrl, webviewType = "EMBEDDED_WEB_VIEW
                             "presidio": {
                                 "webviewType": webviewType  // Use provided param, default to "EMBEDDED_WEB_VIEW", otherwise "EMBEDDED_BROWSER"
                             }
-                        }
+                        },
+                        "keyedCompletionActions": getKeyedCompletionActions()
                     }
                 },
                 "actionSource": "NON_MEMBER_STUDENT_PLAN_MONTHLY"
@@ -51,6 +52,27 @@ function sendOpenWebActionToAndroid(dynamicUrl, webviewType = "EMBEDDED_WEB_VIEW
     };
 
     sendWebbridgeMsg(payload);
+}
+
+function getKeyedCompletionActions() {
+    return {
+        "auth_success": {
+            "identifier": "membershipWebviewNavigateAction",
+            "data": {
+                "type": "performScopedAction",
+                "performScopedAction": {
+                    "type": "webviewAction",
+                    "webviewAction": {
+                        "type": "membershipWebviewNavigateAction"
+                        "membershipWebviewNavigateAction": {
+                            "webUrl": "https://xlb-beta.uber.com/membership/student-verification?query-context={\"request_id\":\"fb2066bf-c1ee-4b30-8083-07491b3facdb\",\"num_screens_back\":1,\"sso_success\":true}"
+                        }
+                    }
+                }
+            },
+            "actionSource": "NON_MEMBER_STUDENT_PLAN_MONTHLY"
+        }
+    };
 }
 
 function sendWebbridgeMsg(payload) {
