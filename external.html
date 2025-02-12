@@ -34,6 +34,8 @@
     <p>Your SSO link: <a href="#" id="dynamicLink">Empty Link</a></p>
     <br>
     <button onclick="sendOpenWebActionToAndroid(document.getElementById('userInput').value)">Open SSO Web Portal</button>
+    <br><br>
+    <button onclick="sendOpenWebActionToAndroid(document.getElementById('userInput').value, 'EMBEDDED_BROWSER')">Open SSO Web Portal In Browser</button>
 
     <script>
         function updateLink() {
