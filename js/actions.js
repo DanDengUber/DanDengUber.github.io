@@ -63,7 +63,7 @@ function getKeyedCompletionActions() {
                 "performScopedAction": {
                     "type": "webviewAction",
                     "webviewAction": {
-                        "type": "membershipWebviewNavigateAction"
+                        "type": "membershipWebviewNavigateAction",
                         "membershipWebviewNavigateAction": {
                             "webUrl": "https://xlb-beta.uber.com/membership/student-verification?query-context={\"request_id\":\"fb2066bf-c1ee-4b30-8083-07491b3facdb\",\"num_screens_back\":1,\"sso_success\":true}"
                         }
