@@ -22,15 +22,10 @@ function sendActionToAndroid(iconType) {
         }
     };
 
-    if (window.MembershipPresidioWebBridge) {
-        console.log("AndroidBridge Msg sent SUCCESS!!");
-        window.MembershipPresidioWebBridge.onMembershipAction(JSON.stringify(payload));
-    } else {
-        console.log("AndroidBridge is not available");
-    }
+    sendWebbridgeMsg(payload);
 }
 
-function sendOpenWebActionToAndroid(dynamicUrl) {
+function sendOpenWebActionToAndroid(dynamicUrl, webviewType = "EMBEDDED_WEB_VIEW") {
     var payload = {
         "type": "membership_action_event",
         "messageId": "083d5b55-1b58-4df0-afe4-5f3751b65df0",
@@ -45,7 +40,7 @@ function sendOpenWebActionToAndroid(dynamicUrl) {
                         "webviewConfig": {
                             "type": "presidio",
                             "presidio": {
-                                "webviewType": "EMBEDDED_WEB_VIEW"
+                                "webviewType": webviewType  // Use provided param, default to "EMBEDDED_WEB_VIEW", otherwise "EMBEDDED_BROWSER"
                             }
                         }
                     }
@@ -55,10 +50,15 @@ function sendOpenWebActionToAndroid(dynamicUrl) {
         }
     };
 
-    if (window.MembershipPresidioWebBridge) {
+    sendWebbridgeMsg(payload);
+}
+
+function sendWebbridgeMsg(payload) {
+    if (window.MembershipPresidioWebBridge && 
+        typeof window.MembershipPresidioWebBridge.onMembershipAction === "function") {
         console.log("AndroidBridge Msg sent SUCCESS!!");
         window.MembershipPresidioWebBridge.onMembershipAction(JSON.stringify(payload));
     } else {
-        console.log("AndroidBridge is not available");
+        console.log("AndroidBridge is not available or function is undefined.");
     }
 }
