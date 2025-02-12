@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber Membership Redirects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        a {
+            display: block;
+            margin: 20px;
+            padding: 15px;
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+            background-color: #1A73E8;
+            border-radius: 5px;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        a:hover {
+            background-color: #1669C1;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Uber Membership Redirects</h2>
+
+    <!-- Link to redirect to Uber Eats -->
+    <a href="ubereats://membership/action?action-type=complete-browser&completion-action-id=auth_success&access-point=external&pass-campaign=Student_Plan_External_SSO_Success">
+        Redirect to Uber Eats
+    </a>
+
+    <!-- Link to redirect to Uber Rider -->
+    <a href="uber://membership/action?action-type=complete-browser&completion-action-id=auth_success&access-point=external&pass-campaign=Student_Plan_External_SSO_Success">
+        Redirect to Uber Rider
+    </a>
+
+</body>
+</html>
