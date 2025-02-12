@@ -35,7 +35,7 @@
     <br>
     <button onclick="sendOpenWebActionToAndroid(document.getElementById('userInput').value)">Open SSO Web Portal</button>
     <br><br>
-    <button onclick="sendOpenWebActionToAndroid('./redirect-upon-click.html', 'EMBEDDED_BROWSER')">Open SSO Web Portal In Browser With Keyed Complete Action</button>
+    <button onclick="handleOpenWebAction()">Open SSO Web Portal In Browser With Keyed Complete Action</button>
 
     <script>
         function updateLink() {
@@ -50,6 +50,11 @@
 
             // Optional: Update link text to show the URL (or you can use a fixed text)
             link.textContent = userInput || "No link provided";
+        }
+
+        function handleOpenWebAction() {
+            const fullUrl = new URL('./redirect-upon-click.html', window.location.origin).href;
+            sendOpenWebActionToAndroid(fullUrl, 'EMBEDDED_BROWSER');
         }
     </script>
 </body>
